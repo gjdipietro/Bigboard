@@ -1,0 +1,30 @@
+
+<div>
+  <input ng-model="query.$">
+</div>
+<button ng-click="setSelectedPos('')"    ng-class="{'active': selectedPos.position == ''}">All</button>
+<button ng-click="setSelectedPos('QB')"  ng-class="{'active': selectedPos.position == 'QB'}">QB</button>
+<button ng-click="setSelectedPos('RB')"  ng-class="{'active': selectedPos.position == 'RB'}">RB</button>
+<button ng-click="setSelectedPos('WR')"  ng-class="{'active': selectedPos.position == 'WR'}">WR</button>
+<button ng-click="setSelectedPos('TE')"  ng-class="{'active': selectedPos.position == 'TE'}">TE</button>
+<button ng-click="setSelectedPos('DEF')" ng-class="{'active': selectedPos.position == 'DEF'}">DEF</button>
+<button ng-click="setSelectedPos('K')"   ng-class="{'active': selectedPos.position == 'K'}">K</button>
+
+
+<ul class="playerList">
+  <li ng-repeat="(id, player) in players | filter:query | filter:selectedPos" ng-class="{'taken': player.taken == 1}">
+    <button ng-click="draftPlayer(player, id)">Draft</button>
+    <strong class="rank">{{player.overallRank}}</strong>
+    <div class="info">
+        <img ng-src="img/players/{{player.playerId}}.jpg">
+        <h2>{{player.displayName}}</h2>
+        <p>{{player.position}} - {{player.team}}</p>
+
+    </div>
+  </li>
+</ul>
+
+<div>
+  <button ng-click="reset()">Reset</button>
+</div>
+     
