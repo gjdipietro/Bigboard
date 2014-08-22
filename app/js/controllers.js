@@ -15,9 +15,9 @@ bigboardControllers.controller('PlayerListCtrl', ['$scope', '$firebase',
     // create a synchronized array for use in our HTML code
     $scope.players = sync.$asArray();
     $scope.selectedPos = {};
-    $scope.selectedPos.position = ''; 
+    $scope.selectedPos.pos = ''; 
     $scope.setSelectedPos = function(pos) {
-      $scope.selectedPos.position = pos;
+      $scope.selectedPos.pos = pos;
     }
 
     
@@ -30,7 +30,7 @@ bigboardControllers.controller('PlayerListCtrl', ['$scope', '$firebase',
     }  
 
     $scope.reset = function() {
-      for (var i=0; i < 500; i++) {
+      for (var i=0; i < 200; i++) {
         var playerRef = new Firebase(ref + '/' + i);
         playerRef.child('taken').transaction(function(currentValue) {
           return 0;

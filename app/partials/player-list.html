@@ -3,12 +3,12 @@
   <input ng-model="query.$">
 </div>
 <button ng-click="setSelectedPos('')"    ng-class="{'active': selectedPos.position == ''}">All</button>
-<button ng-click="setSelectedPos('QB')"  ng-class="{'active': selectedPos.position == 'QB'}">QB</button>
-<button ng-click="setSelectedPos('RB')"  ng-class="{'active': selectedPos.position == 'RB'}">RB</button>
-<button ng-click="setSelectedPos('WR')"  ng-class="{'active': selectedPos.position == 'WR'}">WR</button>
-<button ng-click="setSelectedPos('TE')"  ng-class="{'active': selectedPos.position == 'TE'}">TE</button>
-<button ng-click="setSelectedPos('DEF')" ng-class="{'active': selectedPos.position == 'DEF'}">DEF</button>
-<button ng-click="setSelectedPos('K')"   ng-class="{'active': selectedPos.position == 'K'}">K</button>
+<button ng-click="setSelectedPos('QB')"  ng-class="{'active': selectedPos.pos == 'QB'}">QB</button>
+<button ng-click="setSelectedPos('RB')"  ng-class="{'active': selectedPos.pos == 'RB'}">RB</button>
+<button ng-click="setSelectedPos('WR')"  ng-class="{'active': selectedPos.pos == 'WR'}">WR</button>
+<button ng-click="setSelectedPos('TE')"  ng-class="{'active': selectedPos.pos == 'TE'}">TE</button>
+<button ng-click="setSelectedPos('DEF')" ng-class="{'active': selectedPos.pos == 'DEF'}">DEF</button>
+<button ng-click="setSelectedPos('K')"   ng-class="{'active': selectedPos.pos == 'K'}">K</button>
 
 
 <ul class="playerList">
