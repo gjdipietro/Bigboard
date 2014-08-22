@@ -49,6 +49,7 @@ button.active {background:red;}
 .playerList .info {
   width: 300px;
   float: left;
+  margin-left: 20px;
 }
 .playerList .info img {
   float: left;
@@ -58,7 +59,7 @@ button.active {background:red;}
   line-height: 1;
   font-size: 22px;
   color: #333;
-  margin: 20px 0 0 20px;
+  margin: 20px 0 0 0;
   font-weight: 800;
 }
 .playerList .info p {
