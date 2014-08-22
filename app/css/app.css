@@ -28,16 +28,21 @@ body {
 }
 
 .heading .buttons button {
-  background-color: #DDD;
+  background-color: #EEE;
   color:#666;
+  border-color:#DDD;
+  
 }
 .heading .buttons button:hover {
   background-color: #D9D9D9;
+  cursor: pointer;
+  border-color:#CCC;
 }
 
 .heading .buttons button.active {
   background-color: #333;
   color:#FFF;
+  border-color:#333;
 }
 
 
@@ -45,6 +50,7 @@ body {
   list-style: none;
   margin: 50px auto;
   padding: 0;
+  max-width: 1200px;
 }
 .playerList li {
   margin-bottom: 15px;
@@ -128,5 +134,6 @@ button:hover {
   text-decoration: none;
   background-color: #cc4519;
   color: #fff;
+  cursor: pointer;
 }
 
