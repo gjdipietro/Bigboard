@@ -11,7 +11,7 @@
 
 
 <ul class="playerList">
-  <li ng-repeat="(id, player) in players | filter:{{taken==1}} | filter:selectedPos">
+  <li ng-repeat="(id, player) in players | filter:{{player.taken==1}} | filter:selectedPos">
     <button ng-click="draftPlayer(player, id)">Draft</button>
     <strong class="rank">{{player.rank}}</strong>
     <div class="info">
