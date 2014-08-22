@@ -19,6 +19,10 @@ phonecatApp.config(['$routeProvider',
         templateUrl: 'partials/player-detail.html',
         controller: 'PlayerDetailCtrl'
       }).
+      when('/taken', {
+        templateUrl: 'partials/player-taken.html',
+        controller: 'PlayerTakenCtrl'
+      }).
       otherwise({
         redirectTo: '/players'
       });
