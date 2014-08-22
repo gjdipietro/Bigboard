@@ -1,16 +1,39 @@
 /* app css stylesheet */
 
 body {
-  padding-top: 20px;
   font-family: 'Open Sans', sans-serif;
   background: #EEE;
   max-width: 90%;
-  margin: 50px auto;
 }
-button.active {background:red;}
+
+.heading {
+  background: #FFF; 
+  padding:15px; 
+  border-bottom: 1px solid #DDD
+}
+.heading .search {
+  margin: 0 auto;
+  width: 100%;
+  padding:8px;
+  font-size: 16px;
+}
+.heading .buttons {
+  margin:0 auto;
+}
+
+.heading .buttons button {
+  background-color: #DDD;
+}
+
+.heading .buttons button.active {
+  background-color: #333;
+  color:#FFF;
+}
+
+
 .playerList {
   list-style: none;
-  margin: 0;
+  margin: 50px auto;
   padding: 0;
 }
 .playerList li {
@@ -71,6 +94,9 @@ button.active {background:red;}
   width: 10%;
   margin: 25px 20px 0 0;
   float: right;
+}
+
+button {
   border: none;
   padding: 0.5em 1em;
   text-decoration: none;
@@ -88,14 +114,9 @@ button.active {background:red;}
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-.playerList button:hover {
+button:hover {
   text-decoration: none;
   background-color: #cc4519;
   color: #fff;
 }
-
-
-
-
-
 

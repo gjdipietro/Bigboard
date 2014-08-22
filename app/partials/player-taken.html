@@ -1,14 +1,14 @@
-
-<div>
-  <input ng-model="query.$">
+<div class="heading">
+  <div class="search"><input ng-model="query.$"></div>
+  <div class="buttons">
+    <button ng-click="setSelectedPos('')"    ng-class="{'active': selectedPos.pos == ''}">All</button>
+    <button ng-click="setSelectedPos('QB')"  ng-class="{'active': selectedPos.pos == 'QB'}">QB</button>
+    <button ng-click="setSelectedPos('RB')"  ng-class="{'active': selectedPos.pos == 'RB'}">RB</button>
+    <button ng-click="setSelectedPos('WR')"  ng-class="{'active': selectedPos.pos == 'WR'}">WR</button>
+    <button ng-click="setSelectedPos('TE')"  ng-class="{'active': selectedPos.pos == 'TE'}">TE</button>
+    <button ng-click="setSelectedPos('DEF')" ng-class="{'active': selectedPos.pos == 'DEF'}">DEF</button>
+  </div>
 </div>
-<button ng-click="setSelectedPos('')"    ng-class="{'active': selectedPos.pos == ''}">All</button>
-<button ng-click="setSelectedPos('QB')"  ng-class="{'active': selectedPos.pos == 'QB'}">QB</button>
-<button ng-click="setSelectedPos('RB')"  ng-class="{'active': selectedPos.pos == 'RB'}">RB</button>
-<button ng-click="setSelectedPos('WR')"  ng-class="{'active': selectedPos.pos == 'WR'}">WR</button>
-<button ng-click="setSelectedPos('TE')"  ng-class="{'active': selectedPos.pos == 'TE'}">TE</button>
-<button ng-click="setSelectedPos('DEF')" ng-class="{'active': selectedPos.pos == 'DEF'}">DEF</button>
-
 
 <ul class="playerList">
   <li ng-repeat="(id, player) in players | filter:{{player.taken==1}} | filter:selectedPos">
