@@ -14,12 +14,11 @@
 <ul class="playerList">
   <li ng-repeat="(id, player) in players | filter:query | filter:selectedPos" ng-class="{'taken': player.taken == 1}">
     <button ng-click="draftPlayer(player, id)">Draft</button>
-    <strong class="rank">{{player.overallRank}}</strong>
+    <strong class="rank">{{player.rank}}</strong>
     <div class="info">
-        <img ng-src="img/players/{{player.playerId}}.jpg">
-        <h2>{{player.displayName}}</h2>
-        <p>{{player.position}} - {{player.team}}</p>
-
+        <!--<img ng-src="img/players/{{player.playerId}}.jpg">-->
+        <h2>{{player.name}}</h2>
+        <p>{{player.pos}} - {{player.team}} - Bye {{player.bye}}</p>
     </div>
   </li>
 </ul>
