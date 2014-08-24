@@ -15,12 +15,12 @@ phonecatApp.config(['$routeProvider',
         templateUrl: 'partials/player-list.html',
         controller: 'PlayerListCtrl'
       }).
-      when('/players/:playerId', {
-        templateUrl: 'partials/player-detail.html',
-        controller: 'PlayerDetailCtrl'
-      }).
       when('/taken', {
         templateUrl: 'partials/player-taken.html',
+        controller: 'PlayerListCtrl'
+      }).
+      when('/players/:playerId', {
+        templateUrl: 'partials/player-detail.html',
         controller: 'PlayerDetailCtrl'
       }).
       otherwise({

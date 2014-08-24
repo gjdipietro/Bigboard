@@ -2,7 +2,7 @@
 
 /* Filters */
 
-angular.module('bigBoardFilters', []).filter('positionFilter', [function () {
+angular.module('bigBoardFilters', []).filter('takenFilter', [function () {
 
 }]);
 

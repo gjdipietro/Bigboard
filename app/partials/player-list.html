@@ -1,5 +1,5 @@
 <div class="heading">
-  <div class="search"><input ng-model="query.$"></div>
+  <div class="search"><input ng-model="query.$" placeholder="Search name, team, pos"></div>
   <div class="buttons">
     <button ng-click="setSelectedPos('')"    ng-class="{'active': selectedPos.pos == ''}">All</button>
     <button ng-click="setSelectedPos('QB')"  ng-class="{'active': selectedPos.pos == 'QB'}">QB</button>
@@ -11,7 +11,7 @@
 </div>
 
 <ul class="playerList">
-  <li ng-repeat="(id, player) in players | filter:query | filter:selectedPos" ng-class="{'taken': player.taken == 1}">
+  <li ng-repeat="(id, player) in players | filter:query | filter:selectedPos" ng-class="{'taken': player.taken != 0}">
     <button ng-click="draftPlayer(player, id)">Draft</button>
     <strong class="rank">{{player.rank}}</strong>
     <div class="info">
@@ -22,7 +22,4 @@
   </li>
 </ul>
 
-<div>
-  <button ng-click="reset()">Reset</button>
-</div>
      
